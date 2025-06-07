@@ -1,0 +1,53 @@
+{
+  "name": "rmmvz-launcher---free-tier",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win"
+  },
+  "keywords": [
+    "rpg maker",
+    "game launcher",
+    "rmmv",
+    "rmmz"
+  ],
+  "author": "ReaperBecca",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "devDependencies": {
+    "electron": "^36.4.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.reaperbecca.rmmvzlauncher-ft",
+    "productName": "RPG Maker Launcher",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.developer-tools"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ],
+      "category": "Development"
+    }
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "simple-git": "^3.28.0"
+  }
+}
